@@ -1,3 +1,11 @@
+import { Introduction } from "./components/Introduction";
+import { List } from "./components/List";
+
 export const App = () => {
-    return <div>App</div>
-}
+    return (
+        <div>
+            <Introduction /> 
+            <List/>
+        </div>
+    );
+};
