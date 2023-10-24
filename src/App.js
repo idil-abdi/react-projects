@@ -1,11 +1,13 @@
-import { Introduction } from "./components/Introduction";
-import { List } from "./components/List";
+import { Welcome } from "./components/Welcome";
+import { Messages } from "./components/Messages"
 
 export const App = () => {
     return (
-        <div>
-            <Introduction /> 
-            <List/>
+        <div  className="center">
+            <Welcome name='Edil' position='Daughter'/>
+            <Welcome name='Hooyo' position='Mother'/>
+            <Welcome name='Aabo' position='Father'/>
+            <Messages/>
         </div>
     );
 };
