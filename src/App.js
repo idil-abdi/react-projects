@@ -1,3 +1,5 @@
+import { Welcome } from "./components/Welcome"
+
 export const App = () => {
-    return <div>App</div>
+    return <div><Welcome/></div>
 }
