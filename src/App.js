@@ -1,5 +1,14 @@
-import { Welcome } from "./components/Welcome"
+import { Container, Stack } from "react-bootstrap"
+import { Banner } from "./components/Banner"
+import { WordCounter } from "./components/WordCounter"
 
 export const App = () => {
-    return <div><Welcome/></div>
+    return (
+        <Container className="border my-5 py-2 ">
+            <Stack gap={4}>
+                <Banner/>
+                <WordCounter/>
+            </Stack>
+        </Container>
+    )
 }
