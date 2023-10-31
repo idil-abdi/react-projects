@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer"
 
 export const App = () => {
     return (
-        <Container className="border my-3">
+        <Container>
             <Stack gap={5}>
                 <Header/>
                 <Profile/>
