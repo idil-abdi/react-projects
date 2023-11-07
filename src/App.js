@@ -1,15 +1,14 @@
-import { Container, Stack } from "react-bootstrap";
-import { Banner } from "./components/Banner";
-import { Words } from "./components/Words";
+import { Navbar } from "./components/Navbar"
+import { AppRoutes } from "./AppRoutes"
+import { BrowserRouter } from "react-router-dom"
 
 export const App = () => {
     return(
-        <Container>
-            <Stack gap={3}>
-                <Banner/>
-                <Words/>
-            </Stack>
-        </Container>
+        <BrowserRouter>
+            <Navbar/>
+            <AppRoutes/>
+        </BrowserRouter>
+            
         
     )
 };
