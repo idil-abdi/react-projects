@@ -6,9 +6,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { Badge, IconButton } from "@mui/material";
 import { ShoppingCart } from "@mui/icons-material";
+import { useApp } from "../context/AppProvider"
 
 
 export const Navbar = () => {
+    const { state } = useApp()
+
     const navigate = useNavigate();
 
     return(
@@ -39,7 +42,7 @@ export const Navbar = () => {
                     </Box>
                     <Box>
                         <IconButton onClick={() => navigate("/checkout")} sx={{ my: 2, color: "white" }}>
-                            <Badge badgeContent={4} color="error">
+                            <Badge badgeContent={state?.basket?.length} color="error">
                                 <ShoppingCart/>
                             </Badge>
                         </IconButton>

@@ -1,15 +1,18 @@
-import { createContext, useContext } from "react"
+import { createContext, useContext, useReducer } from "react";
+import { basketReducer } from "../reducers/basketReducer";
 
-const AppConext = createContext()
+const AppContext = createContext();
 
-export const AppProvider = ( {children} ) => {
-    const value = {};
+export const AppProvider = ({ children }) => {
+  const initialState = {
+    basket: [],
+  };
 
-    return (
-        <AppConext.Provider value={value}>
-            {children}
-        </AppConext.Provider>
-    )
+  const [state, dispatch] = useReducer(basketReducer, initialState);
+
+  const value = { state, dispatch };
+
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-export const useApp = () => useContext(AppConext)
+export const useApp = () => useContext(AppContext);
