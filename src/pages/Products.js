@@ -1,6 +1,9 @@
+import { Banner } from "../components/Banner";
+
 export const Products = () => {
     return(
-        <div>Products</div>
-        
+        <div>
+        <Banner title="Products" subTitle="Select your products to buy" />
+        </div>
     )
 };
